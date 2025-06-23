@@ -149,3 +149,48 @@ main {
     font-size: 1.1rem;
 }
 
+/* =============================
+   About & Contact Page
+   ============================= */
+
+.about-section,
+.team-section,
+.contact-section,
+.contact-info {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border-left: 5px solid #73421b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-section p,
+.team-section li,
+.contact-section p,
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.25rem;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
