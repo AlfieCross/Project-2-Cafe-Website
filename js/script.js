@@ -24,3 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+// Menu Filter Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const menuCards = document.querySelectorAll(".menu-card");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category;
+
+      // Update active button
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Show/hide cards
+      menuCards.forEach(card => {
+        if (category === "all" || card.classList.contains(category)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
