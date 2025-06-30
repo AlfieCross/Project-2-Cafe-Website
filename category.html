@@ -33,35 +33,61 @@
   <main>
     <h2>Our Menu</h2>
 
-    <!-- Coffee Section -->
-    <section class="menu-section coffee">
-      <h3>Coffee</h3>
-      <ul class="menu-list">
-        <li>Latte</li>
-        <li>Iced Latte</li>
-        <li>Cappuccino</li>
-        <li>Flat White</li>
-      </ul>
-    </section>
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="coffee">Coffee</button>
+      <button class="filter-btn" data-category="drinks">Drinks</button>
+      <button class="filter-btn" data-category="snacks">Snacks</button>
+    </div>
 
-    <!-- Drinks Section -->
-    <section class="menu-section drinks">
-      <h3>Drinks</h3>
-      <ul class="menu-list">
-        <li>Smoothies</li>
-        <li>Juices</li>
-        <li>Teas</li>
-      </ul>
-    </section>
+    <!-- Grid Menu -->
+    <section class="menu-grid">
+      <!-- Coffee -->
+      <div class="menu-card coffee">
+        <h3>Latte</h3>
+        <p>Smooth & creamy espresso blend</p>
+      </div>
+      <div class="menu-card coffee">
+        <h3>Iced Latte</h3>
+        <p>Chilled version of our latte</p>
+      </div>
+      <div class="menu-card coffee">
+        <h3>Cappuccino</h3>
+        <p>Espresso with frothed milk</p>
+      </div>
+      <div class="menu-card coffee">
+        <h3>Flat White</h3>
+        <p>Strong and silky coffee</p>
+      </div>
 
-    <!-- Snacks Section -->
-    <section class="menu-section snacks">
-      <h3>Snacks</h3>
-      <ul class="menu-list">
-        <li>Croissants</li>
-        <li>Cookies</li>
-        <li>Muffins</li>
-      </ul>
+      <!-- Drinks -->
+      <div class="menu-card drinks">
+        <h3>Smoothies</h3>
+        <p>Fruit blended to perfection</p>
+      </div>
+      <div class="menu-card drinks">
+        <h3>Juices</h3>
+        <p>Freshly squeezed options</p>
+      </div>
+      <div class="menu-card drinks">
+        <h3>Teas</h3>
+        <p>Selection of herbal & black teas</p>
+      </div>
+
+      <!-- Snacks -->
+      <div class="menu-card snacks">
+        <h3>Croissants</h3>
+        <p>Buttery, flaky French pastries</p>
+      </div>
+      <div class="menu-card snacks">
+        <h3>Cookies</h3>
+        <p>Freshly baked daily</p>
+      </div>
+      <div class="menu-card snacks">
+        <h3>Muffins</h3>
+        <p>Delicious with your coffee</p>
+      </div>
     </section>
   </main>
 
