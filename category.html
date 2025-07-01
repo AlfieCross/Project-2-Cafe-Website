@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mr Beans Café | Menu</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -32,61 +32,74 @@
 
   <main>
     <h2>Our Menu</h2>
-
-    <!-- Filter Buttons -->
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="coffee">Coffee</button>
-      <button class="filter-btn" data-category="drinks">Drinks</button>
-      <button class="filter-btn" data-category="snacks">Snacks</button>
-    </div>
-
-    <!-- Grid Menu -->
     <section class="menu-grid">
-      <!-- Coffee -->
-      <div class="menu-card coffee">
-        <h3>Latte</h3>
-        <p>Smooth & creamy espresso blend</p>
+      <!-- Coffee Card -->
+      <div class="menu-card" id="coffee-card">
+        <h3>Coffee</h3>
+        <p>Classic and specialty brews</p>
       </div>
-      <div class="menu-card coffee">
-        <h3>Iced Latte</h3>
-        <p>Chilled version of our latte</p>
-      </div>
-      <div class="menu-card coffee">
-        <h3>Cappuccino</h3>
-        <p>Espresso with frothed milk</p>
-      </div>
-      <div class="menu-card coffee">
-        <h3>Flat White</h3>
-        <p>Strong and silky coffee</p>
-      </div>
-
-      <!-- Drinks -->
-      <div class="menu-card drinks">
-        <h3>Smoothies</h3>
-        <p>Fruit blended to perfection</p>
-      </div>
-      <div class="menu-card drinks">
-        <h3>Juices</h3>
-        <p>Freshly squeezed options</p>
-      </div>
-      <div class="menu-card drinks">
-        <h3>Teas</h3>
-        <p>Selection of herbal & black teas</p>
+      <div class="expandable-panel" id="coffee-panel">
+        <h4>Coffee Options</h4>
+        <ul>
+          <li>Latte (Hot, Iced)</li>
+          <li>Cappuccino (Hot, Iced)</li>
+          <li>Flat White (Hot, Iced)</li>
+          <li>Americano (Hot, Iced)</li>
+          <li>Espresso (Single, Double)</li>
+          <li>Mocha (Hot, Iced)</li>
+          <li>Macchiato (Caramel, Vanilla)</li>
+        </ul>
       </div>
 
-      <!-- Snacks -->
-      <div class="menu-card snacks">
-        <h3>Croissants</h3>
-        <p>Buttery, flaky French pastries</p>
+      <!-- Drinks Card -->
+      <div class="menu-card" id="drinks-card">
+        <h3>Drinks</h3>
+        <p>Refreshing fruit & tea blends</p>
       </div>
-      <div class="menu-card snacks">
-        <h3>Cookies</h3>
-        <p>Freshly baked daily</p>
+      <div class="expandable-panel" id="drinks-panel">
+        <h4>Smoothies</h4>
+        <ul>
+          <li>Strawberry</li>
+          <li>Mango</li>
+          <li>Banana</li>
+          <li>Mixed Berry</li>
+        </ul>
+        <h4>Juices</h4>
+        <ul>
+          <li>Orange</li>
+          <li>Apple</li>
+          <li>Mixed Fruit</li>
+        </ul>
+        <h4>Teas</h4>
+        <ul>
+          <li>Green</li>
+          <li>Black</li>
+          <li>Herbal</li>
+        </ul>
       </div>
-      <div class="menu-card snacks">
-        <h3>Muffins</h3>
-        <p>Delicious with your coffee</p>
+
+      <!-- Snacks Card -->
+      <div class="menu-card" id="snacks-card">
+        <h3>Snacks</h3>
+        <p>Fresh bakery-style bites</p>
+      </div>
+      <div class="expandable-panel" id="snacks-panel">
+        <h4>Croissants</h4>
+        <ul>
+          <li>Almond</li>
+          <li>Butter</li>
+          <li>Chocolate</li>
+        </ul>
+        <h4>Cookies</h4>
+        <ul>
+          <li>Chocolate Chip</li>
+          <li>Oatmeal</li>
+        </ul>
+        <h4>Muffins</h4>
+        <ul>
+          <li>Blueberry</li>
+          <li>Chocolate</li>
+        </ul>
       </div>
     </section>
   </main>
