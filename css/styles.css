@@ -198,6 +198,17 @@
     color: #5c3d2e;
   }
 
+  .menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .menu-item-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* =======================
      Card Layout Sections
   ======================= */
@@ -242,16 +253,16 @@
    Expandable Menu Panels
 ======================= */
 .expandable-panel {
-  display: none;
-  grid-column: 1 / -1;
+  max-height: 0;
+  overflow: hidden;
   background-color: #fff;
-  padding: 1.5rem;
-  margin-top: -1rem;
+  padding: 0 1.5rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-left: 4px solid #5c3d2e;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  animation: expandFade 0.3s ease;
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 .expandable-panel h4 {
@@ -270,6 +281,13 @@
   font-size: 1.05rem;
   padding: 0.25rem 0;
 }
+
+.expandable-panel.open {
+  max-height: 500px; /* large enough to reveal full content */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 
 /* Expand animation */
 @keyframes expandFade {

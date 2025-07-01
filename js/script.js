@@ -57,22 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggles.forEach(({ cardId, panelId }) => {
     const card = document.getElementById(cardId);
     const panel = document.getElementById(panelId);
-
+  
     if (card && panel) {
       card.addEventListener("click", () => {
-        const isVisible = panel.style.display === "block";
-
-        // Hide all other panels
+        const isOpen = panel.classList.contains("open");
+  
+        // Close all panels first
         menuToggles.forEach(({ panelId: otherPanelId }) => {
           const otherPanel = document.getElementById(otherPanelId);
           if (otherPanel && otherPanel !== panel) {
-            otherPanel.style.display = "none";
+            otherPanel.classList.remove("open");
           }
         });
-
-        // Toggle current
-        panel.style.display = isVisible ? "none" : "block";
+  
+        // Toggle current panel
+        panel.classList.toggle("open", !isOpen);
       });
     }
   });
+  
 });
