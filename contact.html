@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Contact</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,26 +33,20 @@
   <main>
     <section class="contact-section">
       <h2>Contact Us</h2>
-      <p>Got a question or just want to say hi? We'd love to hear from you!</p>
-      <form id="contact-form" action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your Name">
+      <p>If you have any questions, feedback, or just want to say hello, fill out the form below and we’ll get back to you as soon as we can.</p>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit" class="btn">Send Message</button>
       </form>
-    </section>
-
-    <section class="contact-info">
-      <h3>Visit or Reach Out</h3>
-      <p><strong>Address:</strong> 123 Bean Street, Brewtown, BT1 2XP</p>
-      <p><strong>Email:</strong> hello@mrbeanscafe.com</p>
-      <p><strong>Phone:</strong> 0123 456 789</p>
     </section>
   </main>
 
