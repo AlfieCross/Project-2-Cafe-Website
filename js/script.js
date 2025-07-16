@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Hamburger Menu Toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+
   // Expand/collapse menu panels on click
   const menuCards = document.querySelectorAll(".menu-card");
 
