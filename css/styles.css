@@ -7,304 +7,268 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
   line-height: 1.6;
-  background-color: #f4f1ea;
-  color: #2e2e2e;
   height: 100%;
+  background-color: #fef9f4;
+  color: #333;
 }
 
-/* =======================
-   Typography
-======================= */
-h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  color: #5c3d2e;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-  color: #5c3d2e;
-  margin: 1rem 0 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-
-/* =======================
-   Links, Buttons, Inputs
-======================= */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #5c3d2e;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
+/* =======================
+   Typography
+======================= */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fascinate", cursive;
 }
 
-.btn:hover {
-  background-color: #3a2a1e;
+h1 {
+  font-size: 2rem;
+  color: #73421b;
 }
 
-input,
-textarea {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+h2 {
+  font-size: 1.75rem;
+  color: #73421b;
   margin-bottom: 1rem;
-  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 /* =======================
-   Header & Navbar
+   Header & Navigation
 ======================= */
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #fdfbd4;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   flex-wrap: wrap;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .logo-img {
-  width: 48px;
+  width: 40px;
   height: auto;
-  margin-right: 0.5rem;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 15px;
+  list-style: none;
 }
 
 .nav-links li a {
+  padding: 8px 12px;
+  border-radius: 4px;
   font-weight: 600;
-  position: relative;
-  padding: 0.25rem;
-  transition: color 0.3s;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #9c6b4f;
-  border-bottom: 2px solid #9c6b4f;
+  background-color: #e4c9a5;
 }
 
-/* ======= Hamburger Menu ======= */
+/* =======================
+   Hamburger Menu
+======================= */
 .menu-toggle {
   display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  margin-left: auto;
 }
 
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }
 
 /* =======================
-   Page Layout
+   Main Content
 ======================= */
 main {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* =======================
-   Hero Section
-======================= */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: url("assets/images/hero.jpg") no-repeat center center/cover;
-  color: #fff;
-  background-blend-mode: overlay;
-  background-color: rgba(92, 61, 46, 0.6);
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  padding: 2rem 1rem;
 }
 
 /* =======================
    Menu Grid & Cards
 ======================= */
 .menu-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-}
-
-.menu-item-wrapper {
-  display: flex;
-  flex-direction: column;
+  padding: 1rem 0;
 }
 
 .menu-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  background-color: #fff5e1;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-  cursor: pointer;
+  text-align: center;
 }
 
 .menu-card:hover {
-  transform: scale(1.03);
-}
-
-.menu-card h3 {
-  color: #5c3d2e;
-  margin: 0;
-}
-
-/* =======================
-   Expandable Panels
-======================= */
-.expandable-panel {
-  position: relative;
-  max-height: 0;
-  overflow: hidden;
-  background-color: #fff;
-  padding: 0 1.5rem;
-  margin: 1rem 0 2rem;
-  border-left: 4px solid #5c3d2e;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-  opacity: 0;
   transform: translateY(-5px);
 }
 
+.menu-card img {
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.2rem;
+  color: #333;
+}
+
+.menu-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =======================
+   Expandable Panel
+======================= */
+.menu-item-wrapper {
+  position: relative;
+}
+
+.expandable-panel {
+  display: none;
+  background-color: #fff9ec;
+  border-left: 4px solid #73421b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: max-height 0.3s ease;
+}
+
 .expandable-panel.open {
-  max-height: 500px;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  opacity: 1;
-  transform: translateY(0);
+  display: block;
 }
 
-.expandable-panel::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 2rem;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
-  filter: drop-shadow(0 -1px 1px rgba(0,0,0,0.08));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* =======================
+   Product Sections
+======================= */
+.product-section {
+  margin-bottom: 3rem;
 }
 
-.expandable-panel.open::before {
-  opacity: 1;
-}
-
-.expandable-panel ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+.product-section h2 {
   margin-bottom: 1rem;
 }
 
-.expandable-panel li {
-  font-size: 1.05rem;
-  padding: 0.25rem 0;
+/* =======================
+   Contact Form
+======================= */
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff5e1;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+form button {
+  background-color: #73421b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #5c3315;
 }
 
 /* =======================
    Footer
 ======================= */
 footer {
-  background-color: #5c3d2e;
-  color: #fff;
+  background-color: #fdfbd4;
   text-align: center;
   padding: 1rem;
-  font-size: 0.95rem;
-}
-
-/* =======================
-   Responsive Design
-======================= */
-/* Mobile Nav Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    color: #5c3d2e;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-  }
-
-  .menu-toggle:checked ~ .nav-links {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: left;
-    padding: 0.75rem 1rem;
-  }
-  
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+  font-size: 0.9rem;
+  color: #444;
 }
 
