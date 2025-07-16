@@ -129,6 +129,18 @@ header {
   border-bottom: 2px solid #9c6b4f;
 }
 
+/* ======= Hamburger Menu ======= */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
 /* =======================
    Page Layout
 ======================= */
@@ -262,18 +274,31 @@ footer {
 /* =======================
    Responsive Design
 ======================= */
+/* Mobile Nav Styles */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+  .hamburger {
+    display: block;
+    color: #5c3d2e;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
-    gap: 0.75rem;
+    width: 100%;
     margin-top: 1rem;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
   }
 
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+  
   .hero h2 {
     font-size: 2rem;
   }
@@ -282,3 +307,4 @@ footer {
     font-size: 1rem;
   }
 }
+

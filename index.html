@@ -15,21 +15,27 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <img src="assets/images/logo.png" alt="Logo: Mr Beans Café" class="logo-img" >
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
+        </a>
         <h1>Mr Beans Café</h1>
       </div>
-      <nav role="navigation" aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="category.html">Menu</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  
+      <!-- Hamburger Toggle -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+  
+      <!-- Navigation Menu -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="category.html">Menu</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </header>
-
+  
   <main>
     <section class="hero">
       <h2>Welcome to Mr Beans Café</h2>
