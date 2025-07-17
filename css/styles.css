@@ -10,10 +10,8 @@
 html,
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #f6f4ef;
-  /* Light cream background */
-  color: #2b2b2b;
-  /* Espresso brown */
+  background-color: #f6f4ef; /* Light cream background */
+  color: #2b2b2b; /* Espresso brown */
   line-height: 1.6;
 }
 
@@ -25,13 +23,13 @@ h2,
 h3,
 h4 {
   font-family: "Montserrat", sans-serif;
-  color: #3e2f22;
-  /* Rich coffee heading */
+  color: #3e2f22; /* Rich coffee heading */
 }
 
 h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  color: #c75000;
 }
 
 h2 {
@@ -65,6 +63,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
 }
 
 .logo-img {
@@ -104,12 +103,11 @@ header {
 }
 
 /* Hamburger */
-/* === Hide hamburger icon on larger screens === */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #2b2b2b;
+  color: #c75000;
 }
 
 /* =======================
@@ -139,7 +137,7 @@ header {
    Buttons
 ======================= */
 .btn {
-  background-color: #3a5a40;
+  background-color: #c75000;
   color: #fff;
   padding: 0.7rem 1.5rem;
   border-radius: 30px;
@@ -214,7 +212,7 @@ main {
    Footer
 ======================= */
 footer {
-  background-color: #3a5a40;
+  background-color: #c75000;
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -224,7 +222,6 @@ footer {
 /* =======================
    Responsive Design
 ======================= */
-/* Responsive Navigation */
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
