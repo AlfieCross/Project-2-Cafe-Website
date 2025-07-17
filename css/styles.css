@@ -7,19 +7,26 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "Open Sans", sans-serif;
-  background-color: #f6f4ef; /* Light cream background */
-  color: #2b2b2b; /* Espresso brown */
+  background-color: #f6f4ef;
+  /* Light cream background */
+  color: #2b2b2b;
+  /* Espresso brown */
   line-height: 1.6;
 }
 
 /* =======================
    Typography
 ======================= */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Montserrat", sans-serif;
-  color: #3e2f22; /* Rich coffee heading */
+  color: #3e2f22;
+  /* Rich coffee heading */
 }
 
 h1 {
@@ -47,7 +54,7 @@ p {
 ======================= */
 header {
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -90,6 +97,7 @@ header {
   background-color: #9c6b4f;
   transition: width 0.3s ease;
 }
+
 .nav-links li a:hover::after,
 .nav-links li a.active::after {
   width: 100%;
@@ -175,7 +183,7 @@ main {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
   padding: 1rem;
   transition: transform 0.3s ease;
