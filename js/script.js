@@ -1,7 +1,15 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Contact form submission handling
+  // Hamburger menu toggle
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+
+  // Contact form submission
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
@@ -21,29 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Hamburger Menu Toggle
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  }
-
-  // Expand/collapse menu panels on click
+  // Menu card expand/collapse
   const menuCards = document.querySelectorAll(".menu-card");
-
   menuCards.forEach((card) => {
     card.addEventListener("click", () => {
       const panel = card.nextElementSibling;
-
-      // Close all open panels
       document.querySelectorAll(".expandable-panel").forEach((p) => {
         if (p !== panel) p.classList.remove("open");
       });
-
-      // Toggle current panel
       panel.classList.toggle("open");
     });
   });
