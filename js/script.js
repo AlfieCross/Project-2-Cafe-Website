@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Contact form submission
+  // Contact form submission handling
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
@@ -29,15 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Menu card expand/collapse
+  // Expandable menu card panels
   const menuCards = document.querySelectorAll(".menu-card");
+
   menuCards.forEach((card) => {
     card.addEventListener("click", () => {
       const panel = card.nextElementSibling;
+
+      // Close all other panels
       document.querySelectorAll(".expandable-panel").forEach((p) => {
         if (p !== panel) p.classList.remove("open");
       });
+
+      // Toggle this panel
       panel.classList.toggle("open");
+
+      // Accessibility: toggle aria-expanded
+      const isOpen = panel.classList.contains("open");
+      card.setAttribute("aria-expanded", isOpen);
     });
   });
 });
