@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
+  <!-- category.html -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Menu</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,12 +22,10 @@
         <h1>Mr Beans Café</h1>
       </div>
 
-      <!-- Hamburger Toggle -->
       <div class="hamburger">
         <i class="fa-solid fa-bars"></i>
       </div>
 
-      <!-- Navigation Menu -->
       <ul class="nav-links">
         <li><a href="index.html" tabindex="1">Home</a></li>
         <li><a href="about.html" tabindex="2">About</a></li>
@@ -39,14 +36,13 @@
     </div>
   </header>
 
-
   <main>
     <h2>Our Menu</h2>
     <p>Click on a category to see what's available:</p>
 
     <div class="menu-grid">
       <!-- Coffee -->
-      <div class="menu-card" tabindex="0">
+      <div class="menu-card" tabindex="0" aria-expanded="false">
         <h3>Coffee</h3>
         <p>Explore our handcrafted coffee blends.</p>
       </div>
@@ -61,12 +57,12 @@
       </div>
 
       <!-- Drinks -->
-      <div class="menu-card" tabindex="0">
+      <div class="menu-card" tabindex="0" aria-expanded="false">
         <h3>Drinks</h3>
         <p>Fresh juices, teas, and more.</p>
       </div>
       <div class="expandable-panel">
-        <h4>Drinks Options:</h4>
+        <h4>Drink Options:</h4>
         <ul>
           <li>Smoothies</li>
           <li>Juices</li>
@@ -75,7 +71,7 @@
       </div>
 
       <!-- Snacks -->
-      <div class="menu-card" tabindex="0">
+      <div class="menu-card" tabindex="0" aria-expanded="false">
         <h3>Snacks</h3>
         <p>Freshly baked treats and more.</p>
       </div>
