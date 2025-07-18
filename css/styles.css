@@ -160,7 +160,9 @@ main {
   margin: 0 auto;
 }
 
-.section {
+.section,
+.about-section,
+.contact-section {
   background: white;
   border-radius: 12px;
   padding: 2rem;
@@ -182,17 +184,15 @@ main {
   color: #3e2f22;
 }
 
-/* Grid Layout */
 .product-grid {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* Individual Product Card */
 .product-card {
   overflow: hidden;
   text-align: center;
@@ -218,12 +218,49 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.product-card .price {
+.product-card .price,
+.price {
   font-size: 1rem;
   color: #c75000;
   font-weight: bold;
 }
 
+/* =======================
+   Menu Cards (Category)
+======================= */
+.menu-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 2rem;
+}
+
+.menu-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.expandable-panel {
+  display: none;
+  padding: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  background: #fff3e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.expandable-panel.open {
+  display: block;
+}
 
 /* =======================
    Footer
