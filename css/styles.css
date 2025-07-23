@@ -275,6 +275,68 @@ main {
 }
 
 /* =======================
+   Shopping Cart
+  ======================= */
+
+.cart-icon {
+  position: relative;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c75000;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #2b4631;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+}
+
+.cart-panel {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  max-height: 60vh;
+  background-color: white;
+  border-top-left-radius: 12px;
+  box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  display: none;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.cart-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cart-panel li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-panel button.remove {
+  background: none;
+  border: none;
+  color: #c75000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#close-cart {
+  margin-top: 1rem;
+  background-color: #c75000;
+}
+
+/* =======================
    Footer
 ======================= */
 footer {

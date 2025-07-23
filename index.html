@@ -22,10 +22,6 @@
         <h1>Mr Beans Café</h1>
       </div>
 
-      <div class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
       <ul class="nav-links">
         <li><a href="index.html" class="active" tabindex="1">Home</a></li>
         <li><a href="about.html" tabindex="2">About</a></li>
@@ -33,6 +29,16 @@
         <li><a href="products.html" tabindex="4">Products</a></li>
         <li><a href="contact.html" tabindex="5">Contact</a></li>
       </ul>
+
+      <div class="cart-icon" id="cart-button">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+      </div>
+
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
     </div>
   </header>
 
@@ -53,6 +59,13 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+  <div id="cart-panel" class="cart-panel">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> £<span id="cart-total">0.00</span></p>
+    <button id="close-cart" class="btn">Close Cart</button>
+  </div>  
 </body>
 
 </html>
