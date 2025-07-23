@@ -49,4 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
       card.setAttribute("aria-expanded", isOpen);
     });
   });
+
+  // Shopping Cart Functionality
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function updateCartStorage() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({ name, price: parseFloat(price), quantity: 1 });
+    }
+
+    updateCartStorage();
+    alert(`${name} added to cart!`);
+  }
+
+  // Add event listeners to all Add to Cart buttons
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.name;
+      const price = button.dataset.price;
+      addToCart(name, price);
+    });
+  });
 });
