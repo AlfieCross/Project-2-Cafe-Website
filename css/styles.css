@@ -248,10 +248,16 @@ main {
   transform: translateY(-5px);
 }
 
-.menu-link {
+.menu-sub-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #c75000;
+  font-weight: bold;
   text-decoration: none;
-  color: inherit;
-  display: block;
+}
+
+.menu-sub-link:hover {
+  text-decoration: underline;
 }
 
 .expandable-panel {
