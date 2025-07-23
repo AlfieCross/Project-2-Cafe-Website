@@ -336,6 +336,17 @@ main {
   background-color: #c75000;
 }
 
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-panel .btn {
+  flex: 1;
+}
+
 /* =======================
    Footer
 ======================= */
