@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- Page: About -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | About</title>
+
+  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
-        </a>
-        <h1>Mr Beans Café</h1>
+<body class="about-page">
+  <div class="page-wrapper">
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header>
+      <div class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
+          </a>
+          <h1>Mr Beans Café</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="index.html" tabindex="1">Home</a></li>
+          <li><a href="about.html" class="active" tabindex="2">About</a></li>
+          <li><a href="category.html" tabindex="3">Menu</a></li>
+          <li><a href="products.html" tabindex="4">Products</a></li>
+          <li><a href="contact.html" tabindex="5">Contact</a></li>
+        </ul>
+
+        <!-- Cart Icon -->
+        <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="hamburger" aria-label="Open navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
+    </header>
 
-      <ul class="nav-links">
-        <li><a href="index.html" tabindex="1">Home</a></li>
-        <li><a href="about.html" class="active" tabindex="2">About</a></li>
-        <li><a href="category.html" tabindex="3">Menu</a></li>
-        <li><a href="products.html" tabindex="4">Products</a></li>
-        <li><a href="contact.html" tabindex="5">Contact</a></li>
-      </ul>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <section class="about-section" aria-label="About Mr Beans Café">
+        <h2>About Mr Beans Café</h2>
+        <p>At Mr Beans Café, we believe in creating more than just coffee. Our mission is to build a welcoming space for everyone in the community. Whether you're here for a peaceful moment, a productive work session, or a joyful meet-up with friends, we have something special waiting for you.</p>
 
-      <div class="cart-icon" id="cart-button">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count">0</span>
+        <p>Founded in 2025 in the heart of Weston-super-Mare, we bring together warm service, quality ingredients, and a cozy atmosphere to create an unforgettable café experience.</p>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== CART PANEL ===== -->
+    <div id="cart-panel" class="cart-panel" aria-label="Shopping cart panel">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> £<span id="cart-total">0.00</span></p>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn">Clear Cart</button>
+        <button id="checkout" class="btn">Checkout</button>
       </div>
-
-      <div class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
+      <button id="close-cart" class="btn">Close Cart</button>
     </div>
-  </header>
 
-  <main>
-    <section class="about-section">
-      <h2>About Mr Beans Café</h2>
-      <p>
-        Mr Beans Café is a cozy and modern spot serving delicious coffee, refreshing drinks, and tasty snacks. We're passionate about crafting memorable moments with every cup and treat.
-      </p>
-      <p>
-        Our café combines high-quality ingredients with warm service and a welcoming atmosphere. Whether you're stopping in for your daily coffee, catching up with friends, or grabbing a snack on the go, we’re here to make your visit special.
-      </p>
-      <p>
-        We pride ourselves on supporting the community and maintaining sustainable sourcing for all our products. Come see why locals love Mr Beans Café — your new favorite hangout.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
-
-  <div id="cart-panel" class="cart-panel">
-    <h3>Your Cart</h3>
-    <ul id="cart-items"></ul>
-    <p><strong>Total:</strong> £<span id="cart-total">0.00</span></p>
-    <div class="cart-actions">
-      <button id="clear-cart" class="btn">Clear Cart</button>
-      <button id="checkout" class="btn">Checkout</button>
-    </div>
-    <button id="close-cart" class="btn">Close Cart</button>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
   </div>
-  
 </body>
-
 </html>

@@ -1,144 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- products.html -->
+  <!-- Page: Products -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Products</title>
+
+  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
-        </a>
-        <h1>Mr Beans Café</h1>
+<body class="products-page">
+  <div class="page-wrapper">
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header>
+      <div class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
+          </a>
+          <h1>Mr Beans Café</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="index.html" tabindex="1">Home</a></li>
+          <li><a href="about.html" tabindex="2">About</a></li>
+          <li><a href="category.html" tabindex="3">Menu</a></li>
+          <li><a href="products.html" class="active" tabindex="4">Products</a></li>
+          <li><a href="contact.html" tabindex="5">Contact</a></li>
+        </ul>
+
+        <!-- Cart Icon -->
+        <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="hamburger" aria-label="Open navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
+    </header>
 
-      <ul class="nav-links">
-        <li><a href="index.html" tabindex="1">Home</a></li>
-        <li><a href="about.html" tabindex="2">About</a></li>
-        <li><a href="category.html" tabindex="3">Menu</a></li>
-        <li><a href="products.html" class="active" tabindex="4">Products</a></li>
-        <li><a href="contact.html" tabindex="5">Contact</a></li>
-      </ul>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <section class="intro" aria-label="Product Introduction">
+        <h2>Our Products</h2>
+        <p>Explore our range of coffee, drinks, and snacks. Click on a product to add it to your cart.</p>
+      </section>
 
-      <div class="cart-icon" id="cart-button">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count">0</span>
+      <!-- Coffee Section -->
+      <section class="product-section" id="coffee" aria-label="Coffee Products">
+        <h2>Our Coffee</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="assets/images/products/coffee/latte.jpeg" alt="Latte">
+            <h3>Latte</h3>
+            <p class="price">£3.00</p>
+            <button class="btn add-to-cart" data-name="Latte" data-price="3.00">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/coffee/iced-latte.jpeg" alt="Iced Latte">
+            <h3>Iced Latte</h3>
+            <p class="price">£3.50</p>
+            <button class="btn add-to-cart" data-name="Iced Latte" data-price="3.50">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/coffee/cappuccino.jpeg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p class="price">£3.20</p>
+            <button class="btn add-to-cart" data-name="Cappuccino" data-price="3.20">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/coffee/flat-white.jpeg" alt="Flat White">
+            <h3>Flat White</h3>
+            <p class="price">£3.10</p>
+            <button class="btn add-to-cart" data-name="Flat White" data-price="3.10">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Drinks Section -->
+      <section class="product-section" id="drinks" aria-label="Drink Products">
+        <h2>Our Drinks</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="assets/images/products/drinks/strawberry-smoothie.jpeg" alt="Strawberry Smoothie">
+            <h3>Strawberry Smoothie</h3>
+            <p class="price">£3.80</p>
+            <button class="btn add-to-cart" data-name="Strawberry Smoothie" data-price="3.80">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/drinks/orange-juice.jpeg" alt="Orange Juice">
+            <h3>Orange Juice</h3>
+            <p class="price">£2.50</p>
+            <button class="btn add-to-cart" data-name="Orange Juice" data-price="2.50">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/drinks/tea.jpeg" alt="Tea">
+            <h3>Tea</h3>
+            <p class="price">£2.20</p>
+            <button class="btn add-to-cart" data-name="Tea" data-price="2.20">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Snacks Section -->
+      <section class="product-section" id="snacks" aria-label="Snack Products">
+        <h2>Our Snacks</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="assets/images/products/snacks/chocolate-croissant.jpeg" alt="Chocolate Croissant">
+            <h3>Chocolate Croissant</h3>
+            <p class="price">£2.80</p>
+            <button class="btn add-to-cart" data-name="Chocolate Croissant" data-price="2.80">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/snacks/chocolate-chip-cookies.jpeg" alt="Chocolate Chip Cookie">
+            <h3>Chocolate Chip Cookie</h3>
+            <p class="price">£1.50</p>
+            <button class="btn add-to-cart" data-name="Chocolate Chip Cookie" data-price="1.50">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/images/products/snacks/blueberry-muffin.jpeg" alt="Blueberry Muffin">
+            <h3>Blueberry Muffin</h3>
+            <p class="price">£2.40</p>
+            <button class="btn add-to-cart" data-name="Blueberry Muffin" data-price="2.40">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== CART PANEL ===== -->
+    <div id="cart-panel" class="cart-panel" aria-label="Shopping cart panel">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> £<span id="cart-total">0.00</span></p>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn">Clear Cart</button>
+        <button id="checkout" class="btn">Checkout</button>
       </div>
-
-      <div class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
+      <button id="close-cart" class="btn">Close Cart</button>
     </div>
-  </header>
 
-  <main>
-    <section class="product-section" id="coffee">
-      <h2>Our Coffee</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="assets/images/products/coffee/latte.jpeg" alt="Latte">
-          <h3>Latte</h3>
-          <p class="price">£3.00</p>
-          <button class="btn add-to-cart" data-name="Latte" data-price="3.00">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/coffee/iced-latte.jpeg" alt="Iced Latte">
-          <h3>Iced Latte</h3>
-          <p class="price">£3.50</p>
-          <button class="btn add-to-cart" data-name="Iced Latte" data-price="3.50">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/coffee/cappuccino.jpeg" alt="Cappuccino">
-          <h3>Cappuccino</h3>
-          <p class="price">£3.20</p>
-          <button class="btn add-to-cart" data-name="Cappuccino" data-price="3.20">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/coffee/flat-white.jpeg" alt="Flat White">
-          <h3>Flat White</h3>
-          <p class="price">£3.10</p>
-          <button class="btn add-to-cart" data-name="Flat White" data-price="3.10">Add to Cart</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-section" id="drinks">
-      <h2>Our Drinks</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="assets/images/products/drinks/strawberry-smoothie.jpeg" alt="Strawberry Smoothie">
-          <h3>Strawberry Smoothie</h3>
-          <p class="price">£3.80</p>
-          <button class="btn add-to-cart" data-name="Strawberry Smoothie" data-price="3.80">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/drinks/orange-juice.jpeg" alt="Orange Juice">
-          <h3>Orange Juice</h3>
-          <p class="price">£2.50</p>
-          <button class="btn add-to-cart" data-name="Orange Juice" data-price="2.50">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/drinks/tea.jpeg" alt="Tea">
-          <h3>Tea</h3>
-          <p class="price">£2.20</p>
-          <button class="btn add-to-cart" data-name="Tea" data-price="2.20">Add to Cart</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-section" id="snacks">
-      <h2>Our Snacks</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="assets/images/products/snacks/chocolate-croissant.jpeg" alt="Chocolate Croissant">
-          <h3>Chocolate Croissant</h3>
-          <p class="price">£2.80</p>
-          <button class="btn add-to-cart" data-name="Chocolate Croissant" data-price="2.80">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/snacks/chocolate-chip-cookies.jpeg" alt="Chocolate Chip Cookie">
-          <h3>Chocolate Chip Cookie</h3>
-          <p class="price">£1.50</p>
-          <button class="btn add-to-cart" data-name="Chocolate Chip Cookie" data-price="1.50">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/snacks/blueberry-muffin.jpeg" alt="Blueberry Muffin">
-          <h3>Blueberry Muffin</h3>
-          <p class="price">£2.40</p>
-          <button class="btn add-to-cart" data-name="Blueberry Muffin" data-price="2.40">Add to Cart</button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
-
-  <div id="cart-panel" class="cart-panel">
-    <h3>Your Cart</h3>
-    <ul id="cart-items"></ul>
-    <p><strong>Total:</strong> £<span id="cart-total">0.00</span></p>
-    <div class="cart-actions">
-      <button id="clear-cart" class="btn">Clear Cart</button>
-      <button id="checkout" class="btn">Checkout</button>
-    </div>
-    <button id="close-cart" class="btn">Close Cart</button>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
   </div>
-  
 </body>
-
 </html>

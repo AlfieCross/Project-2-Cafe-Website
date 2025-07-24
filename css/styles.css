@@ -10,25 +10,28 @@
 html,
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #f6f4ef; /* Light cream background */
-  color: #2b2b2b; /* Espresso brown */
+  background-color: #f6f4ef;
+  color: #2b2b2b;
   line-height: 1.6;
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* =======================
    Typography
 ======================= */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif;
-  color: #3e2f22; /* Rich coffee heading */
+  color: #3e2f22;
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
   color: #c75000;
 }
 
@@ -62,13 +65,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
   position: relative;
 }
 
 .logo-img {
-  height: 40px;
-  margin-right: 10px;
+  height: 30px;
+  margin-right: 8px;
 }
 
 .nav-links {
@@ -85,7 +88,6 @@ header {
   color: #2e2e2e;
 }
 
-/* Hover/Active underline effect */
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -102,7 +104,6 @@ header {
   width: 100%;
 }
 
-/* Hamburger */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -158,6 +159,24 @@ main {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  flex-grow: 1;
+}
+
+body.home-page {
+  background: url("../assets/images/background/home-page.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+body.about-page {
+  background: url("../assets/images/background/about-page.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body.products-page {
+  background-color: #f6f4ef;
 }
 
 .section,
@@ -218,7 +237,6 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.product-card .price,
 .price {
   font-size: 1rem;
   color: #c75000;
@@ -276,8 +294,7 @@ main {
 
 /* =======================
    Shopping Cart
-  ======================= */
-
+======================= */
 .cart-icon {
   position: relative;
   font-size: 1.5rem;
@@ -351,11 +368,12 @@ main {
    Footer
 ======================= */
 footer {
+  padding: 1rem;
   background-color: #c75000;
   color: #fff;
   text-align: center;
-  padding: 1rem;
   font-size: 0.95rem;
+  margin-top: auto;
 }
 
 /* =======================
