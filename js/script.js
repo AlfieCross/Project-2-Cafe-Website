@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("show");
     });
+
+    // Close menu on nav link click (for mobile)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+      });
+    });
   }
 
   // ================================
@@ -52,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Toggle current panel
       panel.classList.toggle("open");
 
-      // Update ARIA for accessibility
+      // Update ARIA
       card.setAttribute("aria-expanded", panel.classList.contains("open"));
     });
   });
@@ -120,9 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartDisplay();
   }
 
-  // ================================
   // Add-to-Cart Buttons
-  // ================================
   document.querySelectorAll(".add-to-cart").forEach((button) => {
     button.addEventListener("click", () => {
       const name = button.dataset.name;
@@ -131,9 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ================================
-  // Cart Actions
-  // ================================
+  // Cart Remove Button
   if (cartItemsList) {
     cartItemsList.addEventListener("click", (e) => {
       if (e.target.classList.contains("remove")) {
@@ -144,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Open Cart Panel
   if (cartButton) {
     cartButton.addEventListener("click", () => {
       cartPanel.style.display = "block";
@@ -151,12 +155,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Close Cart Panel
   if (closeCartBtn) {
     closeCartBtn.addEventListener("click", () => {
       cartPanel.style.display = "none";
     });
   }
 
+  // Clear Cart
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {
       if (confirm("Are you sure you want to clear your cart?")) {
@@ -167,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Checkout (Fake)
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
       if (cart.length === 0) {
@@ -180,6 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Initial render
+  // Initial Render
   updateCartDisplay();
 });
