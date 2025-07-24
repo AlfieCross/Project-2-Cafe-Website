@@ -6,7 +6,7 @@ A fully responsive and accessible fictional café website built using **HTML**, 
 
 ## 🔗 Live Preview
 
-[View on GitHub Pages](https://your-username.github.io/Project-2-Cafe-Website/) <!-- Replace with your actual GitHub Pages link -->
+[View on GitHub Pages](https://AlfieCross.github.io/Project-2-Cafe-Website/) <!-- Replace with your actual GitHub Pages link -->
 
 ---
 
