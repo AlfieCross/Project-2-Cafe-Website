@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Page: Menu / Category -->
+  <!-- ========== Meta & Title ========== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Menu</title>
 
-  <!-- Styles & Fonts -->
+  <!-- ========== Fonts & Styles ========== -->
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- ========== Font Awesome ========== -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="category-page">
+<body class="menu-page">
   <div class="page-wrapper">
 
-    <!-- ===== HEADER / NAVBAR ===== -->
+    <!-- ========== HEADER / NAVBAR ========== -->
     <header>
       <div class="navbar">
-
-        <!-- Logo -->
         <div class="logo">
           <a href="index.html">
             <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
@@ -30,7 +28,6 @@
           <h1>Mr Beans Café</h1>
         </div>
 
-        <!-- Navigation Links -->
         <ul class="nav-links">
           <li><a href="index.html" tabindex="1">Home</a></li>
           <li><a href="about.html" tabindex="2">About</a></li>
@@ -39,83 +36,61 @@
           <li><a href="contact.html" tabindex="5">Contact</a></li>
         </ul>
 
-        <!-- Cart Icon -->
         <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
           <i class="fa-solid fa-cart-shopping"></i>
           <span id="cart-count">0</span>
         </div>
 
-        <!-- Mobile Menu Icon -->
         <div class="hamburger" aria-label="Open navigation menu">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
+    <!-- ========== MAIN CONTENT ========== -->
     <main>
-      <section class="menu-section" aria-label="Menu categories">
+      <section class="menu-section" aria-label="Menu Categories">
         <h2>Our Menu</h2>
-        <p>Click on a category to see what's available:</p>
 
-        <div class="menu-grid">
+        <!-- Coffee Category -->
+        <div class="menu-category">
+          <h3>Coffee</h3>
+          <ul>
+            <li>Latte</li>
+            <li>Iced Latte</li>
+            <li>Cappuccino</li>
+            <li>Flat White</li>
+          </ul>
+        </div>
 
-          <!-- Coffee -->
-          <div class="menu-card" tabindex="0" aria-expanded="false">
-            <h3>Coffee</h3>
-            <p>Explore our handcrafted coffee blends.</p>
-          </div>
-          <div class="expandable-panel">
-            <h4>Coffee Options:</h4>
-            <ul>
-              <li>Latte</li>
-              <li>Iced Latte</li>
-              <li>Cappuccino</li>
-              <li>Flat White</li>
-            </ul>
-            <a href="products.html#coffee" class="menu-sub-link">View full selection →</a>
-          </div>
+        <!-- Drinks Category -->
+        <div class="menu-category">
+          <h3>Drinks</h3>
+          <ul>
+            <li>Smoothies</li>
+            <li>Juices</li>
+            <li>Teas</li>
+          </ul>
+        </div>
 
-          <!-- Drinks -->
-          <div class="menu-card" tabindex="0" aria-expanded="false">
-            <h3>Drinks</h3>
-            <p>Fresh juices, teas, and more.</p>
-          </div>
-          <div class="expandable-panel">
-            <h4>Drink Options:</h4>
-            <ul>
-              <li>Smoothies</li>
-              <li>Juices</li>
-              <li>Teas</li>
-            </ul>
-            <a href="products.html#drinks" class="menu-sub-link">View full selection →</a>
-          </div>
-
-          <!-- Snacks -->
-          <div class="menu-card" tabindex="0" aria-expanded="false">
-            <h3>Snacks</h3>
-            <p>Freshly baked treats and more.</p>
-          </div>
-          <div class="expandable-panel">
-            <h4>Snack Options:</h4>
-            <ul>
-              <li>Croissants</li>
-              <li>Cookies</li>
-              <li>Muffins</li>
-            </ul>
-            <a href="products.html#snacks" class="menu-sub-link">View full selection →</a>
-          </div>
-
+        <!-- Snacks Category -->
+        <div class="menu-category">
+          <h3>Snacks</h3>
+          <ul>
+            <li>Croissants</li>
+            <li>Cookies</li>
+            <li>Muffins</li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ========== FOOTER ========== -->
     <footer>
       <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
     </footer>
 
-    <!-- ===== CART PANEL ===== -->
+    <!-- ========== CART PANEL ========== -->
     <div id="cart-panel" class="cart-panel" aria-label="Shopping cart panel">
       <h3>Your Cart</h3>
       <ul id="cart-items"></ul>
@@ -127,7 +102,7 @@
       <button id="close-cart" class="btn">Close Cart</button>
     </div>
 
-    <!-- Scripts -->
+    <!-- ========== SCRIPT ========== -->
     <script src="js/script.js"></script>
   </div>
 </body>
