@@ -1,125 +1,91 @@
-# Mr Beans Café ☕️
+# ☕ Mr Beans Café
 
-A fully responsive and accessible fictional café website built using **HTML**, **CSS**, and **JavaScript**. This is Project 2 of my front-end development learning journey.
+Welcome to the official website for **Mr Beans Café** — a cozy-modern fictional café experience designed to showcase clean UI, responsive layouts, and interactive functionality built using **HTML, CSS, and JavaScript**.
+
+## 🌐 Live Demo
+
+🔗 [Visit the website](https://AlfieCross.github.io/Project-2-Cafe-Website/)  
+> _Deployed with GitHub Pages_
 
 ---
 
-## 🔗 Live Preview
+## 📌 Project Overview
 
-[View on GitHub Pages](https://AlfieCross.github.io/Project-2-Cafe-Website/) <!-- Replace with your actual GitHub Pages link -->
-
----
-
-## 📁 Pages Included
-
-- `index.html` – Home page with hero and intro
-- `about.html` – About the café and purpose
-- `category.html` – Expandable menu cards for drinks, coffee, and snacks
-- `products.html` – Image gallery with prices and “Add to Cart” buttons
-- `contact.html` – Contact form with validation and feedback
+This project was created as part of a front-end development portfolio to demonstrate:
+- Clean and responsive design
+- JavaScript interactivity (shopping cart, form handling)
+- Accessibility and UX best practices
+- File structure and code documentation
+- Deployment using GitHub Pages
 
 ---
 
 ## 🎯 Features
 
-### 🧩 Core Functionality
-
-- **Responsive Design** – Mobile-first layout with media queries
-- **Hamburger Menu** – Toggle navigation on small screens
-- **Expandable Menu Cards** – Clickable panels on Category page
-- **Contact Form** – With client-side validation and thank-you message
-- **Product Gallery** – Structured product cards with pricing and images
-- **Interactive Cart System**:
-  - Add to Cart buttons
-  - Quantity tracking (`Flat White x2`)
-  - Total price calculation
-  - Remove item buttons
-  - Clear cart option
-  - Fake checkout button
-  - Persistent state using `localStorage`
+- ✅ Responsive navigation bar with hamburger menu for mobile
+- ✅ Interactive shopping cart with localStorage persistence
+- ✅ Filtered menu and categorized product layout
+- ✅ Contact form with client-side validation
+- ✅ Semantic HTML with ARIA attributes
+- ✅ Accessible design with color contrast and keyboard navigation
 
 ---
 
-## 🧰 Built With
+## 🖼️ Screenshots
 
-- HTML5 & CSS3
-- JavaScript (vanilla)
-- Google Fonts
-- Font Awesome
+![Home Page](assets/screenshots/home-page.png)  
+![About Page](assets/screenshots/about-page.png)  
+![Menu Page](assets/screenshots/menu-page.png)  
+![Products Page](assets/screenshots/products-page.png)  
+![Contact Page](assets/screenshots/contact-page.png)
 
 ---
 
-## 📦 Folder Structure
+## 🧱 Technologies Used
 
-project-root/
-├── assets/
-│ └── images/
-│ └── products/
-├── css/
-│ └── styles.css
-├── js/
-│ └── script.js
+- **HTML5** – Semantic structure and accessible content
+- **CSS3** – Responsive design, media queries, card layouts
+- **JavaScript (ES6)** – Interactive functionality (cart, nav, form)
+- **Google Fonts** – Montserrat & Open Sans
+- **Font Awesome** – Icons for cart and menu
+- **Pexels** - For background images
+
+---
+
+## 🗂️ Project Structure
+
+```
+Project-2-Cafe-Website/
+│
 ├── index.html
 ├── about.html
 ├── category.html
-├── contact.html
 ├── products.html
+├── contact.html
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   └── script.js
+│
+├── assets/
+│   ├── images/         ← Product & background images
+│   └── screenshots/    ← Screenshots for README
+│
 └── README.md
-
-
----
-
-## 🧪 Validation & Testing
-
-- ✅ HTML passed W3C Validator
-- ✅ CSS passed Jigsaw Validator
-- ✅ JavaScript passed [JSHint](https://jshint.com/)
-- ✅ Contact form tested for validation
-- ✅ Cart tested for:
-  - Adding and removing items
-  - Totals and quantities
-  - LocalStorage persistence
+```
 
 ---
 
-## 🧑‍🦯 Accessibility & UX
+## ✅ Testing & Validation
 
-- Semantic HTML elements (`main`, `section`, `header`, etc.)
-- `aria` attributes used for expanded state and navigation
-- Accessible keyboard navigation and labels
-- Visual contrast maintained between text and background
+- **HTML**: Passed W3C Validator – no errors
+- **CSS**: Passed Jigsaw CSS Validator – no issues
+- **JavaScript**: Checked manually in DevTools – no console errors
+- **Links Tested**: All navigation and cart buttons tested across all pages
+- **Responsive Design**: Tested via Chrome, Firefox, and mobile view using DevTools
 
----
-
-## 🚀 Deployment
-
-Deployed using **GitHub Pages**
-
-To deploy:
-1. Push your project to your GitHub repository
-2. Go to `Settings > Pages`
-3. Select source as `main` and root folder `/`
-4. GitHub will give you a live preview link
+✔️ All code manually tested for usability, responsiveness, and accessibility.
 
 ---
-
-## 📝 Screenshots
-
-- Full homepage
-- Product cards with “Add to Cart”
-- Cart panel open with items
-- Responsive view on mobile
-
----
-
-## 🔗 Attribution
-
-- Font Awesome: [https://fontawesome.com](https://fontawesome.com)
-- Google Fonts: [https://fonts.google.com](https://fonts.google.com)
-
----
-
-## ✍️ Author
-
-**Alfie Cross**  
-Front-End Developer in Training
