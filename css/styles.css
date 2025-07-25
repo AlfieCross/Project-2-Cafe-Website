@@ -168,6 +168,39 @@ body.home-page {
 }
 
 /* =======================
+   About Page
+======================= */
+
+body.about-page {
+  background: url('../assets/images/background/about-page.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.about-section {
+  background-color: white;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* =======================
    Footer
 ======================= */
 footer {
