@@ -33,13 +33,33 @@ This project was created as part of a front-end development portfolio to demonst
 
 ## 🖼️ Screenshots
 
+**Home Page**
 ![Home Page](assets/screenshots/home-page.png)  
+**About Page**
 ![About Page](assets/screenshots/about-page.png)  
+**Menu Page**
 ![Menu Page](assets/screenshots/menu-page.png)  
-![Products Page](assets/screenshots/products-page.png)  
+**Product Page**
+![Products Page](assets/screenshots/products-page.png)
+**Contact Page**  
 ![Contact Page](assets/screenshots/contact-page.png)
 
 ---
+
+## 📊 Lighthouse Audit
+
+**Home Page**
+![Lighthouse Home Page Report](assets/screenshots/lighthouse-home.png)
+**About Page**
+![Lighthouse About Page Report](assets/screenshots/lighthouse-about.png)
+**Menu Page**
+![Lighthouse Menu Page Report](assets/screenshots/lighthouse-category.png)
+**Product Page**
+![Lighthouse Menu Page Report](assets/screenshots/lighthouse-products.png)
+**Contact Page**
+![lighthouse Contact Page Report](assets/screenshots/lighthouse-contact.png)
+
+Lighthouse tests were run on Chrome DevTools to validate the site’s performance, accessibility, and SEO readiness. All metrics passed with strong scores.
 
 ## 🧱 Technologies Used
 
