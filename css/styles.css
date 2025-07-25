@@ -18,7 +18,6 @@ body {
   min-height: 100%;
 }
 
-/* Page container */
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -28,7 +27,9 @@ body {
 /* =======================
    Typography
 ======================= */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Montserrat', sans-serif;
   color: #3e2f22;
 }
@@ -53,7 +54,7 @@ p {
 ======================= */
 header {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -109,7 +110,15 @@ header {
   color: #c75000;
 }
 
-/* Hamburger icon (hidden on desktop) */
+/* =======================
+   Mobile Nav & Cart Icons
+======================= */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -117,8 +126,38 @@ header {
   cursor: pointer;
 }
 
+.cart-icon {
+  display: block;
+  position: relative;
+  font-size: 1.5rem;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-icon:hover {
+  color: #c75000;
+  transform: scale(1.1);
+}
+
+.cart-icon:active {
+  transform: scale(0.95);
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #c75000;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
 /* =======================
-   Hero Section
+   Hero Section (Home)
 ======================= */
 body.home-page {
   background-image: url('../assets/images/background/home-page.jpg');
@@ -189,7 +228,6 @@ body.home-page {
 /* =======================
    About Page
 ======================= */
-
 body.about-page {
   background: url('../assets/images/background/about-page.jpg') no-repeat center center fixed;
   background-repeat: no-repeat;
@@ -222,6 +260,15 @@ body.about-page {
 /* =======================
    Contact Page
 ======================= */
+body.contact-page {
+  background: url('../assets/images/background/contact-page.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
 .contact-section {
   background-color: white;
   max-width: 600px;
@@ -275,6 +322,15 @@ body.about-page {
 /* =======================
    Menu / Category Page
 ======================= */
+body.menu-page {
+  background: url('../assets/images/background/category-page.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
 .menu-section {
   background-color: #fff;
   max-width: 800px;
@@ -313,6 +369,15 @@ body.about-page {
 /* =======================
    Products Page
 ======================= */
+body.products-page {
+  background: url('../assets/images/background/products-page.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
 .products-section {
   max-width: 1000px;
   margin: 3rem auto;
@@ -350,7 +415,7 @@ body.about-page {
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
 
@@ -406,11 +471,19 @@ body.about-page {
 }
 
 .cart-icon {
-  position: relative;
+  display: block;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
   font-size: 1.5rem;
   color: #2e2e2e;
+  background-color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
 }
 
 .cart-icon:hover {
@@ -493,7 +566,6 @@ body.about-page {
   color: #3e2f22;
 }
 
-
 .add-to-cart {
   background-color: #c75000;
   color: white;
@@ -522,18 +594,14 @@ footer {
   margin-top: auto;
 }
 
-/* =======================
-   Responsive Styles (Mobile)
-======================= */
 @media (max-width: 768px) {
-
-  /* Navbar layout */
   .navbar {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     position: relative;
+    z-index: 1000;
   }
 
   .logo {
@@ -546,7 +614,7 @@ footer {
     height: 28px;
   }
 
-  /* Container for cart and hamburger */
+  /* Container for hamburger and cart */
   .navbar-icons {
     display: flex;
     align-items: center;
@@ -558,13 +626,20 @@ footer {
     font-size: 1.8rem;
     color: #c75000;
     cursor: pointer;
+    z-index: 1001;
   }
 
   .cart-icon {
-    position: relative;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
     font-size: 1.6rem;
-    cursor: pointer;
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     color: #c75000;
+    z-index: 1002;
   }
 
   .cart-icon span {
@@ -582,6 +657,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
+    gap: 1rem;
     background-color: white;
     position: absolute;
     top: 100%;
@@ -589,7 +665,7 @@ footer {
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    z-index: 99;
+    z-index: 999;
   }
 
   .nav-links.show {

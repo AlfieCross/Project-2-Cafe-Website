@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ========== Meta & Title ========== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Menu</title>
 
-  <!-- ========== Fonts & Styles ========== -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- ========== Font Awesome ========== -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,23 +17,23 @@
     <!-- ========== HEADER / NAVBAR ========== -->
     <header>
       <div class="navbar">
+
+        <!-- Left: Logo + Title -->
         <div class="logo">
           <a href="index.html">
             <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
           </a>
           <h1>Mr Beans Café</h1>
         </div>
-    
+
+        <!-- Right: Hamburger -->
         <div class="navbar-icons">
-          <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="cart-count">0</span>
-          </div>
-          <div class="hamburger" aria-label="Open navigation menu">
+          <div class="hamburger" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
-    
+
+        <!-- Nav Links -->
         <ul class="nav-links">
           <li><a href="index.html" tabindex="1">Home</a></li>
           <li><a href="about.html" tabindex="2">About</a></li>
@@ -45,26 +41,32 @@
           <li><a href="products.html" tabindex="4">Products</a></li>
           <li><a href="contact.html" tabindex="5">Contact</a></li>
         </ul>
+
       </div>
-    </header>    
+    </header>
+
+    <!-- ========== CART ICON ========== -->
+    <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cart-count">0</span>
+    </div>
 
     <!-- ========== MAIN CONTENT ========== -->
-    <main>
-      <section class="menu-section" aria-label="Menu Categories">
+    <main id="main">
+      <section class="menu-section" aria-label="Menu categories">
         <h2>Our Menu</h2>
 
-        <!-- Coffee Category -->
+        <!-- Coffee Section -->
         <div class="menu-category">
           <h3>Coffee</h3>
           <ul>
             <li>Latte</li>
             <li>Iced Latte</li>
             <li>Cappuccino</li>
-            <li>Flat White</li>
           </ul>
         </div>
 
-        <!-- Drinks Category -->
+        <!-- Drinks Section -->
         <div class="menu-category">
           <h3>Drinks</h3>
           <ul>
@@ -74,7 +76,7 @@
           </ul>
         </div>
 
-        <!-- Snacks Category -->
+        <!-- Snacks Section -->
         <div class="menu-category">
           <h3>Snacks</h3>
           <ul>
@@ -103,7 +105,6 @@
       <button id="close-cart" class="btn">Close Cart</button>
     </div>
 
-    <!-- ========== SCRIPT ========== -->
     <script src="js/script.js"></script>
   </div>
 </body>

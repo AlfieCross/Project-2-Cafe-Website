@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ========== Meta & Title ========== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Home</title>
 
-  <!-- ========== Fonts & Styles ========== -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- ========== Font Awesome Icons ========== -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,7 +17,8 @@
     <!-- ========== HEADER / NAVBAR ========== -->
     <header>
       <div class="navbar">
-        <!-- Logo and Title -->
+
+        <!-- Left: Logo + Title -->
         <div class="logo">
           <a href="index.html">
             <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
@@ -29,18 +26,14 @@
           <h1>Mr Beans Café</h1>
         </div>
 
-        <!-- Cart & Hamburger in container -->
+        <!-- Right: Hamburger + Cart -->
         <div class="navbar-icons">
-          <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="cart-count">0</span>
-          </div>
-          <div class="hamburger" aria-label="Open navigation menu">
+          <div class="hamburger" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Nav Links (hidden on mobile, shown on toggle) -->
         <ul class="nav-links">
           <li><a href="index.html" class="active" tabindex="1">Home</a></li>
           <li><a href="about.html" tabindex="2">About</a></li>
@@ -48,11 +41,19 @@
           <li><a href="products.html" tabindex="4">Products</a></li>
           <li><a href="contact.html" tabindex="5">Contact</a></li>
         </ul>
+
       </div>
     </header>
 
+    <!-- ========== CART ICON ========== -->
+    <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cart-count">0</span>
+    </div>
+
     <!-- ========== MAIN CONTENT ========== -->
     <main id="main">
+
       <!-- Hero Section -->
       <section class="hero" aria-label="Hero banner">
         <div class="hero-content">
@@ -65,8 +66,10 @@
       <!-- Intro Section -->
       <section class="intro section" aria-label="Intro content">
         <h2>Discover Our Story</h2>
-        <p>From classic coffees to handcrafted pastries, Mr Beans Café is your go-to place for comfort and connection. Whether you're grabbing your morning latte or catching up with friends, we’ve got something special brewing for you.</p>
+        <p>From classic coffees to handcrafted pastries, Mr Beans Café is your go-to place for comfort and connection.
+        Whether you're grabbing your morning latte or catching up with friends, we’ve got something special brewing for you.</p>
       </section>
+
     </main>
 
     <!-- ========== FOOTER ========== -->

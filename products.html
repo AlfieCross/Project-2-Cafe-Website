@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ========== Meta & Title ========== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Products</title>
 
-  <!-- ========== Fonts & Styles ========== -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- ========== Font Awesome ========== -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,23 +17,22 @@
     <!-- ========== HEADER / NAVBAR ========== -->
     <header>
       <div class="navbar">
+        <!-- Left: Logo + Title -->
         <div class="logo">
           <a href="index.html">
             <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
           </a>
           <h1>Mr Beans Café</h1>
         </div>
-    
+
+        <!-- Right: Hamburger -->
         <div class="navbar-icons">
-          <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="cart-count">0</span>
-          </div>
-          <div class="hamburger" aria-label="Open navigation menu">
+          <div class="hamburger" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
-    
+
+        <!-- Nav Links -->
         <ul class="nav-links">
           <li><a href="index.html" tabindex="1">Home</a></li>
           <li><a href="about.html" tabindex="2">About</a></li>
@@ -46,7 +41,7 @@
           <li><a href="contact.html" tabindex="5">Contact</a></li>
         </ul>
       </div>
-    </header>    
+    </header>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main>
@@ -58,84 +53,75 @@
           <h3>Coffee</h3>
           <div class="product-grid">
             <div class="product-card">
-              <img src="assets/images/products/coffee/latte.jpg" alt="Latte">
+              <img src="assets/images/products/coffee/latte.jpg" alt="Latte" class="product-img">
               <h4>Latte</h4>
               <p>£3.00</p>
               <button class="add-to-cart btn" data-name="Latte" data-price="3.00">Add to Cart</button>
             </div>
             <div class="product-card">
-              <img src="assets/images/products/coffee/iced-latte.jpg" alt="Iced Latte">
+              <img src="assets/images/products/coffee/iced-latte.jpg" alt="Iced Latte" class="product-img">
               <h4>Iced Latte</h4>
               <p>£3.30</p>
               <button class="add-to-cart btn" data-name="Iced Latte" data-price="3.30">Add to Cart</button>
             </div>
             <div class="product-card">
-              <img src="assets/images/products/coffee/cappuccino.jpg" alt="Cappuccino">
+              <img src="assets/images/products/coffee/cappuccino.jpg" alt="Cappuccino" class="product-img">
               <h4>Cappuccino</h4>
               <p>£2.90</p>
               <button class="add-to-cart btn" data-name="Cappuccino" data-price="2.90">Add to Cart</button>
             </div>
-            <div class="product-card">
-              <img src="assets/images/products/coffee/flat-white.jpg" alt="Flat White">
-              <h4>Flat White</h4>
-              <p>£3.10</p>
-              <button class="add-to-cart btn" data-name="Flat White" data-price="3.10">Add to Cart</button>
-            </div>
           </div>
         </div>
-        
 
         <!-- Drinks -->
         <div class="product-category">
           <h3>Drinks</h3>
           <div class="product-grid">
             <div class="product-card">
-              <img src="assets/images/products/drinks/strawberry-smoothie.jpg" alt="Strawberry Smoothie">
+              <img src="assets/images/products/drinks/strawberry-smoothie.jpg" alt="Strawberry Smoothie" class="product-img">
               <h4>Strawberry Smoothie</h4>
               <p>£3.50</p>
               <button class="add-to-cart btn" data-name="Strawberry Smoothie" data-price="3.50">Add to Cart</button>
             </div>
             <div class="product-card">
-              <img src="assets/images/products/drinks/orange-juice.jpg" alt="Orange Juice">
+              <img src="assets/images/products/drinks/orange-juice.jpg" alt="Orange Juice" class="product-img">
               <h4>Orange Juice</h4>
               <p>£2.20</p>
               <button class="add-to-cart btn" data-name="Orange Juice" data-price="2.20">Add to Cart</button>
             </div>
             <div class="product-card">
-              <img src="assets/images/products/drinks/tea.jpg" alt="Green Tea">
-              <h4>Green Tea</h4>
+              <img src="assets/images/products/drinks/tea.jpg" alt="Tea" class="product-img">
+              <h4>Tea</h4>
               <p>£1.90</p>
               <button class="add-to-cart btn" data-name="Green Tea" data-price="1.90">Add to Cart</button>
             </div>
           </div>
         </div>
-        
 
+        <!-- Snacks -->
         <div class="product-category">
           <h3>Snacks</h3>
           <div class="product-grid">
             <div class="product-card">
-              <img src="assets/images/products/snacks/chocolate-croissant.jpg" alt="Chocolate Croissant">
+              <img src="assets/images/products/snacks/chocolate-croissant.jpg" alt="Chocolate Croissant" class="product-img">
               <h4>Chocolate Croissant</h4>
               <p>£2.40</p>
               <button class="add-to-cart btn" data-name="Chocolate Croissant" data-price="2.40">Add to Cart</button>
             </div>
             <div class="product-card">
-              <img src="assets/images/products/snacks/chocolate-chip-cookies.jpg" alt="Chocolate Chip Cookie">
+              <img src="assets/images/products/snacks/chocolate-chip-cookies.jpg" alt="Chocolate Chip Cookie" class="product-img">
               <h4>Chocolate Chip Cookie</h4>
               <p>£1.60</p>
               <button class="add-to-cart btn" data-name="Chocolate Chip Cookie" data-price="1.60">Add to Cart</button>
             </div>
             <div class="product-card">
-              <img src="assets/images/products/snacks/blueberry-muffin.jpg" alt="Blueberry Muffin">
+              <img src="assets/images/products/snacks/blueberry-muffin.jpg" alt="Blueberry Muffin" class="product-img">
               <h4>Blueberry Muffin</h4>
               <p>£2.20</p>
               <button class="add-to-cart btn" data-name="Blueberry Muffin" data-price="2.20">Add to Cart</button>
             </div>
           </div>
         </div>
-        
-
       </section>
     </main>
 
@@ -154,6 +140,12 @@
         <button id="checkout" class="btn">Checkout</button>
       </div>
       <button id="close-cart" class="btn">Close Cart</button>
+    </div>
+
+    <!-- ========== FLOATING CART ICON ========== -->
+    <div class="cart-icon floating-cart" id="cart-button" aria-label="Shopping Cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cart-count">0</span>
     </div>
 
     <!-- ========== SCRIPT ========== -->
