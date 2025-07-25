@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ========== Meta & Title ========== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Home</title>
 
-  <!-- Styles & Fonts -->
+  <!-- ========== Fonts & Styles ========== -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- ========== Font Awesome Icons ========== -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="home-page">
   <div class="page-wrapper">
 
-    <!-- ===== HEADER / NAVBAR ===== -->
+    <!-- ========== HEADER / NAVBAR ========== -->
     <header>
       <div class="navbar">
-
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
@@ -29,7 +29,7 @@
           <h1>Mr Beans Café</h1>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Navigation -->
         <ul class="nav-links">
           <li><a href="index.html" class="active" tabindex="1">Home</a></li>
           <li><a href="about.html" tabindex="2">About</a></li>
@@ -38,41 +38,42 @@
           <li><a href="contact.html" tabindex="5">Contact</a></li>
         </ul>
 
-        <!-- Cart Icon -->
+        <!-- Cart & Hamburger -->
         <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
           <i class="fa-solid fa-cart-shopping"></i>
           <span id="cart-count">0</span>
         </div>
 
-        <!-- Mobile Menu Icon -->
         <div class="hamburger" aria-label="Open navigation menu">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
+    <!-- ========== MAIN CONTENT ========== -->
     <main>
-
       <!-- Hero Section -->
-      <section class="hero" aria-label="Welcome message">
-        <h2>Welcome to Mr Beans Café</h2>
+      <section class="hero" aria-label="Hero banner">
+        <div class="hero-content">
+          <h2>Welcome to Mr Beans Café</h2>
+          <p>Your neighbourhood stop for handcrafted drinks, cozy moments, and local flavour.</p>
+          <a href="category.html" class="btn">Explore Our Menu</a>
+        </div>
       </section>
 
       <!-- Intro Section -->
-      <section class="intro section" aria-label="Main intro">
+      <section class="intro section" aria-label="Intro content">
         <h2>Discover Our Story</h2>
-        <p>From classic coffees to handcrafted pastries, Mr Beans Café is your neighbourhood spot for comfort and connection. Whether you're here to grab your morning latte or unwind with friends, we’ve got something special brewing just for you.</p>
+        <p>From classic coffees to handcrafted pastries, Mr Beans Café is your go-to place for comfort and connection. Whether you're grabbing your morning latte or catching up with friends, we’ve got something special brewing for you.</p>
       </section>
-
     </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ========== FOOTER ========== -->
     <footer>
       <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
     </footer>
 
-    <!-- ===== CART PANEL ===== -->
+    <!-- ========== CART PANEL ========== -->
     <div id="cart-panel" class="cart-panel" aria-label="Shopping cart panel">
       <h3>Your Cart</h3>
       <ul id="cart-items"></ul>
@@ -84,9 +85,8 @@
       <button id="close-cart" class="btn">Close Cart</button>
     </div>
 
+    <!-- ========== SCRIPT ========== -->
+    <script src="js/script.js"></script>
   </div>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
 </body>
 </html>
