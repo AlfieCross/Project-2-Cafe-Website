@@ -106,3 +106,17 @@ Project-2-Cafe-Website/
 ✔️ All code manually tested for usability, responsiveness, and accessibility.
 
 ---
+
+## ➕ Future Improvements
+
+While the current version of the site meets the project requirements, here are some improvements I’d consider making in future iterations:
+
+- 🔄 **Add a backend or database** to store orders and contact form submissions  
+- 🧾 **Implement a working checkout system** with payment processing (e.g. Stripe API)  
+- 🎨 **Allow users to customize orders** (e.g. add milk types, toppings, sizes)  
+- 🧠 **Use toast notifications** instead of browser alerts for a smoother user experience  
+- 🌍 **Improve accessibility further** with skip links and more screen reader enhancements  
+- 📱 **Enhance mobile layout** with smoother animations and off-canvas cart panel  
+- 🧪 **Set up unit tests** for cart functionality and form validation using testing frameworks  
+
+---
