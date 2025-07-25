@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Page: Contact -->
+  <!-- ========== Meta & Title ========== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr Beans Café | Contact</title>
 
-  <!-- Styles & Fonts -->
+  <!-- ========== Fonts & Styles ========== -->
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- ========== Font Awesome ========== -->
   <script src="https://kit.fontawesome.com/6ac9086a06.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="contact-page">
   <div class="page-wrapper">
 
-    <!-- ===== HEADER / NAVBAR ===== -->
+    <!-- ========== HEADER / NAVBAR ========== -->
     <header>
       <div class="navbar">
-
-        <!-- Logo -->
         <div class="logo">
           <a href="index.html">
             <img src="assets/images/logo.png" alt="Mr Beans logo" class="logo-img">
@@ -30,12 +28,6 @@
           <h1>Mr Beans Café</h1>
         </div>
 
-        <!-- Mobile Menu Icon -->
-        <div class="hamburger" aria-label="Open navigation menu">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-
-        <!-- Navigation Links -->
         <ul class="nav-links">
           <li><a href="index.html" tabindex="1">Home</a></li>
           <li><a href="about.html" tabindex="2">About</a></li>
@@ -43,16 +35,23 @@
           <li><a href="products.html" tabindex="4">Products</a></li>
           <li><a href="contact.html" class="active" tabindex="5">Contact</a></li>
         </ul>
+
+        <div class="cart-icon" id="cart-button" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+
+        <div class="hamburger" aria-label="Open navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
+    <!-- ========== MAIN CONTENT ========== -->
     <main>
-      <section class="contact-section" aria-label="Contact form">
-        <h2>Contact Us</h2>
-        <p>Have a question or want to get in touch? Fill out the form below:</p>
-
-        <form id="contact-form">
+      <section class="contact-section" aria-label="Contact Form">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post" class="contact-form">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
 
@@ -67,13 +66,25 @@
       </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ========== FOOTER ========== -->
     <footer>
       <p>&copy; 2025 Mr Beans Café. All rights reserved.</p>
     </footer>
-  </div>
 
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
+    <!-- ========== CART PANEL ========== -->
+    <div id="cart-panel" class="cart-panel" aria-label="Shopping cart panel">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> £<span id="cart-total">0.00</span></p>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn">Clear Cart</button>
+        <button id="checkout" class="btn">Checkout</button>
+      </div>
+      <button id="close-cart" class="btn">Close Cart</button>
+    </div>
+
+    <!-- ========== SCRIPT ========== -->
+    <script src="js/script.js"></script>
+  </div>
 </body>
 </html>
