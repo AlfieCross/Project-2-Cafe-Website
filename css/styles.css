@@ -14,7 +14,8 @@ body {
   color: #2b2b2b;
   line-height: 1.6;
   scroll-behavior: smooth;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
 }
 
 /* Page container */
@@ -101,8 +102,12 @@ header {
    Hero Section
 ======================= */
 body.home-page {
-  background: url('../assets/images/background/home-page.jpg') no-repeat center center fixed;
+  background-image: url('../assets/images/background/home-page.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
 }
 
 .hero {
