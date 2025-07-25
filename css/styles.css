@@ -521,3 +521,145 @@ footer {
   font-size: 0.95rem;
   margin-top: auto;
 }
+
+/* =======================
+   Responsive Styles (Mobile)
+======================= */
+@media (max-width: 768px) {
+
+  /* Navbar layout */
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    height: 28px;
+  }
+
+  /* Container for cart and hamburger */
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    color: #c75000;
+    cursor: pointer;
+  }
+
+  .cart-icon {
+    position: relative;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #c75000;
+  }
+
+  .cart-icon span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #c75000;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+
+  /* Mobile nav links dropdown */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 99;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    padding: 4rem 1rem;
+    min-height: 50vh;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Section spacing */
+  .intro.section,
+  .about-section,
+  .contact-section,
+  .menu-section,
+  .products-section {
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+  }
+
+  /* Grid adjustments */
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .product-card img {
+    max-height: 130px;
+  }
+
+  /* Contact form input size */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  /* Buttons */
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
