@@ -380,7 +380,7 @@ body.about-page {
    Cart Panel
 ======================= */
 .cart-panel {
-  display: none; /* ✅ Important: hide by default */
+  display: none;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -397,6 +397,22 @@ body.about-page {
 
 .cart-panel.open {
   display: block;
+}
+
+.add-to-cart {
+  background-color: #c75000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #a84300;
 }
 
 /* =======================
