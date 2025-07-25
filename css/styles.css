@@ -111,7 +111,7 @@ header {
 }
 
 /* =======================
-   Mobile Nav & Cart Icons
+   Mobile Nav & Icons
 ======================= */
 .navbar-icons {
   display: flex;
@@ -124,36 +124,6 @@ header {
   font-size: 1.8rem;
   color: #c75000;
   cursor: pointer;
-}
-
-.cart-icon {
-  display: block;
-  position: relative;
-  font-size: 1.5rem;
-  color: #2e2e2e;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.cart-icon:hover {
-  color: #c75000;
-  transform: scale(1.1);
-}
-
-.cart-icon:active {
-  transform: scale(0.95);
-}
-
-#cart-count {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: #c75000;
-  color: white;
-  font-size: 0.75rem;
-  padding: 2px 6px;
-  border-radius: 50%;
-  font-weight: bold;
 }
 
 /* =======================
@@ -594,6 +564,10 @@ footer {
   margin-top: auto;
 }
 
+/* =======================
+   Media Queries
+  ======================= */
+
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
@@ -614,11 +588,15 @@ footer {
     height: 28px;
   }
 
-  /* Container for hamburger and cart */
+  /* Icons wrapper top right */
   .navbar-icons {
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
   }
 
   .hamburger {
@@ -626,7 +604,6 @@ footer {
     font-size: 1.8rem;
     color: #c75000;
     cursor: pointer;
-    z-index: 1001;
   }
 
   .cart-icon {
@@ -642,7 +619,8 @@ footer {
     z-index: 1002;
   }
 
-  .cart-icon span {
+  .cart-icon span,
+  #cart-count {
     position: absolute;
     top: -8px;
     right: -10px;
@@ -651,9 +629,10 @@ footer {
     font-size: 0.7rem;
     border-radius: 50%;
     padding: 2px 6px;
+    font-weight: bold;
   }
 
-  /* Mobile nav links dropdown */
+  /* Mobile nav menu dropdown */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -665,6 +644,8 @@ footer {
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 12px 12px;
+    transition: all 0.3s ease;
     z-index: 999;
   }
 
@@ -674,9 +655,24 @@ footer {
 
   .nav-links li {
     margin: 0.5rem 0;
+    width: 100%;
   }
 
-  /* Typography adjustments */
+  .nav-links li a {
+    display: block;
+    font-size: 1rem;
+    color: #2e2e2e;
+    padding: 0.75rem 0.5rem;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .nav-links li a:hover {
+    color: #c75000;
+  }
+
+  /* Typography */
   h1 {
     font-size: 1.5rem;
   }
@@ -693,7 +689,7 @@ footer {
     font-size: 0.95rem;
   }
 
-  /* Hero adjustments */
+  /* Hero Section */
   .hero {
     padding: 4rem 1rem;
     min-height: 50vh;
@@ -717,7 +713,7 @@ footer {
     margin: 2rem 1rem;
   }
 
-  /* Grid adjustments */
+  /* Product grid */
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 1rem;
@@ -727,7 +723,7 @@ footer {
     max-height: 130px;
   }
 
-  /* Contact form input size */
+  /* Contact form */
   .contact-form input,
   .contact-form textarea {
     font-size: 0.95rem;
