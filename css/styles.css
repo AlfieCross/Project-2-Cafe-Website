@@ -68,6 +68,7 @@ header {
   align-items: center;
   padding: 0.5rem 1.5rem;
   position: relative;
+  background-color: #fff;
 }
 
 .logo-img {
@@ -151,7 +152,7 @@ header {
 }
 
 .btn:hover {
-  background-color: #c75000;
+  background-color: #a84100;
 }
 
 /* =======================
@@ -167,13 +168,11 @@ main {
 body.home-page {
   background: url("../assets/images/background/home-page.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 body.about-page {
   background: url("../assets/images/background/about-page.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 body.products-page {
@@ -190,7 +189,9 @@ body.products-page {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
-/* Contact form input styling */
+/* =======================
+   Contact Form
+======================= */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -264,7 +265,7 @@ textarea:focus {
 }
 
 /* =======================
-   Menu Cards (Category)
+   Menu Cards
 ======================= */
 .menu-grid {
   display: grid;
@@ -399,6 +400,41 @@ footer {
 /* =======================
    Responsive Design
 ======================= */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .product-grid,
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.25rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
@@ -407,7 +443,6 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    gap: 1rem;
     background-color: #fff;
     position: absolute;
     top: 70px;
@@ -415,6 +450,7 @@ footer {
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 999;
   }
 
   .nav-links.show {
@@ -424,5 +460,66 @@ footer {
   .nav-links li {
     text-align: center;
     margin: 0.5rem 0;
+  }
+
+  .product-grid,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .cart-panel {
+    width: 100%;
+    max-height: 70vh;
   }
 }
