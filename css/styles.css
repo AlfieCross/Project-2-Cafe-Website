@@ -67,9 +67,28 @@ header {
   position: relative;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo-img {
-  height: 30px;
-  margin-right: 0.5rem;
+  height: 60px;
+  width: auto;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #c75000;
+  margin: 0;
 }
 
 .nav-links {

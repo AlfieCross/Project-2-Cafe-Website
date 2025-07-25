@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ================================
-  // 1. Hamburger Menu Toggle
-  // ================================
+  // ==================================
+  // 1. Hamburger Menu (Mobile Nav)
+  // ==================================
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("show");
     });
 
-    // Close nav on link click (for mobile UX)
     navLinks.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("show");
@@ -20,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ================================
+  // ==================================
   // 2. Contact Form Submission
-  // ================================
+  // ==================================
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
@@ -41,23 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ================================
-  // 3. Expandable Menu Cards (Category Page)
-  // ================================
-  document.querySelectorAll(".menu-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const panel = card.nextElementSibling;
-      document.querySelectorAll(".expandable-panel").forEach(p => {
-        if (p !== panel) p.classList.remove("open");
-      });
-      panel.classList.toggle("open");
-      card.setAttribute("aria-expanded", panel.classList.contains("open"));
-    });
-  });
-
-  // ================================
-  // 4. Shopping Cart Logic
-  // ================================
+  // ==================================
+  // 3. Shopping Cart Logic
+  // ==================================
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   const cartButton = document.getElementById("cart-button");
@@ -69,12 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearBtn = document.getElementById("clear-cart");
   const checkoutBtn = document.getElementById("checkout");
 
-  // Save cart to localStorage
-  const saveCart = () => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  };
+  const saveCart = () => localStorage.setItem("cart", JSON.stringify(cart));
 
-  // Render cart items and total
   const renderCart = () => {
     if (!cartItemsList || !cartTotal || !cartCount) return;
 
@@ -89,11 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let total = 0;
+
     cart.forEach((item, i) => {
       const li = document.createElement("li");
       li.innerHTML = `
         ${item.name} x${item.quantity} - £${(item.price * item.quantity).toFixed(2)}
-        <button class="remove" data-index="${i}" aria-label="Remove ${item.name} from cart">✕</button>
+        <button class="remove" data-index="${i}" aria-label="Remove ${item.name}">✕</button>
       `;
       cartItemsList.appendChild(li);
       total += item.price * item.quantity;
@@ -104,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     saveCart();
   };
 
-  // Add item to cart
   const addToCart = (name, price) => {
     const existing = cart.find(item => item.name === name);
     if (existing) {
@@ -112,11 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       cart.push({ name, price: parseFloat(price), quantity: 1 });
     }
+
     alert(`${name} added to cart!`);
     renderCart();
   };
 
-  // Bind "Add to Cart" buttons
   document.querySelectorAll(".add-to-cart").forEach((btn) => {
     btn.addEventListener("click", () => {
       const { name, price } = btn.dataset;
@@ -124,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Remove individual cart items
   if (cartItemsList) {
     cartItemsList.addEventListener("click", (e) => {
       if (e.target.classList.contains("remove")) {
@@ -135,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Show/hide cart panel
   if (cartButton) {
     cartButton.addEventListener("click", () => {
       if (cart.length === 0) {
@@ -153,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Clear cart
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {
       if (confirm("Are you sure you want to clear your cart?")) {
@@ -164,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Checkout (demo)
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
       if (cart.length === 0) {
@@ -178,6 +155,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Initial render on page load
-  renderCart();
+  renderCart(); // Initial load
 });
