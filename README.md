@@ -48,18 +48,15 @@ This project was created as part of a front-end development portfolio to demonst
 
 ## 📊 Lighthouse Audit
 
-**Home Page**
-![Lighthouse Home Page Report](assets/screenshots/lighthouse-home.png)
-**About Page**
-![Lighthouse About Page Report](assets/screenshots/lighthouse-about.png)
-**Menu Page**
-![Lighthouse Menu Page Report](assets/screenshots/lighthouse-category.png)
-**Product Page**
-![Lighthouse Menu Page Report](assets/screenshots/lighthouse-products.png)
-**Contact Page**
-![lighthouse Contact Page Report](assets/screenshots/lighthouse-contact.png)
+Lighthouse tests were run in Chrome DevTools to validate the site’s performance, accessibility, and SEO readiness. All pages passed with strong scores.
 
-Lighthouse tests were run on Chrome DevTools to validate the site’s performance, accessibility, and SEO readiness. All metrics passed with strong scores.
+| Page          | Report Screenshot |
+|---------------|-------------------|
+| **Home Page** | ![Home Lighthouse](assets/screenshots/lighthouse-home.png) |
+| **About Page** | ![About Lighthouse](assets/screenshots/lighthouse-about.png) |
+| **Menu Page** | ![Menu Lighthouse](assets/screenshots/lighthouse-category.png) |
+| **Product Page** | ![Product Lighthouse](assets/screenshots/lighthouse-products.png) |
+| **Contact Page** | ![Contact Lighthouse](assets/screenshots/lighthouse-contact.png) |
 
 ## 🧱 Technologies Used
 
