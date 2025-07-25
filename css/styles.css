@@ -405,6 +405,35 @@ body.about-page {
   margin-bottom: 1rem;
 }
 
+.cart-icon {
+  position: relative;
+  font-size: 1.5rem;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-icon:hover {
+  color: #c75000;
+  transform: scale(1.1);
+}
+
+.cart-icon:active {
+  transform: scale(0.95);
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #c75000;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
 #cart-items {
   list-style: none;
   padding: 0;
