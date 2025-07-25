@@ -91,7 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (existing) {
       existing.quantity += 1;
     } else {
-      cart.push({ name, price: parseFloat(price), quantity: 1 });
+      cart.push({
+        name,
+        price: parseFloat(price),
+        quantity: 1
+      });
     }
 
     alert(`${name} added to cart!`);
@@ -100,7 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".add-to-cart").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const { name, price } = btn.dataset;
+      const {
+        name,
+        price
+      } = btn.dataset;
       if (name && price) addToCart(name, price);
     });
   });
