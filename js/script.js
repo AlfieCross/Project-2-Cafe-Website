@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   // ================================
-  // Hamburger Menu Toggle
+  // 1. Hamburger Menu Toggle
   // ================================
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
@@ -10,16 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("show");
     });
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+    // Close nav on link click (for mobile UX)
+    navLinks.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("show");
-        hamburger.focus(); // Return focus to hamburger for accessibility
+        hamburger.focus();
       });
     });
   }
 
   // ================================
-  // Contact Form Submission
+  // 2. Contact Form Submission
   // ================================
   const contactForm = document.getElementById("contact-form");
 
@@ -40,23 +42,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ================================
-  // Expandable Menu Cards
+  // 3. Expandable Menu Cards (Category Page)
   // ================================
   document.querySelectorAll(".menu-card").forEach((card) => {
     card.addEventListener("click", () => {
       const panel = card.nextElementSibling;
-
-      document.querySelectorAll(".expandable-panel").forEach((p) => {
+      document.querySelectorAll(".expandable-panel").forEach(p => {
         if (p !== panel) p.classList.remove("open");
       });
-
       panel.classList.toggle("open");
       card.setAttribute("aria-expanded", panel.classList.contains("open"));
     });
   });
 
   // ================================
-  // Shopping Cart Logic
+  // 4. Shopping Cart Logic
   // ================================
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -69,8 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearBtn = document.getElementById("clear-cart");
   const checkoutBtn = document.getElementById("checkout");
 
-  const saveCart = () => localStorage.setItem("cart", JSON.stringify(cart));
+  // Save cart to localStorage
+  const saveCart = () => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
 
+  // Render cart items and total
   const renderCart = () => {
     if (!cartItemsList || !cartTotal || !cartCount) return;
 
@@ -85,12 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let total = 0;
-
     cart.forEach((item, i) => {
       const li = document.createElement("li");
       li.innerHTML = `
         ${item.name} x${item.quantity} - £${(item.price * item.quantity).toFixed(2)}
-        <button class="remove" data-index="${i}">✕</button>
+        <button class="remove" data-index="${i}" aria-label="Remove ${item.name} from cart">✕</button>
       `;
       cartItemsList.appendChild(li);
       total += item.price * item.quantity;
@@ -98,10 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cartTotal.textContent = total.toFixed(2);
     cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-
     saveCart();
   };
 
+  // Add item to cart
   const addToCart = (name, price) => {
     const existing = cart.find(item => item.name === name);
     if (existing) {
@@ -109,18 +112,19 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       cart.push({ name, price: parseFloat(price), quantity: 1 });
     }
-
     alert(`${name} added to cart!`);
     renderCart();
   };
 
+  // Bind "Add to Cart" buttons
   document.querySelectorAll(".add-to-cart").forEach((btn) => {
     btn.addEventListener("click", () => {
       const { name, price } = btn.dataset;
-      addToCart(name, price);
+      if (name && price) addToCart(name, price);
     });
   });
 
+  // Remove individual cart items
   if (cartItemsList) {
     cartItemsList.addEventListener("click", (e) => {
       if (e.target.classList.contains("remove")) {
@@ -131,12 +135,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Show/hide cart panel
   if (cartButton) {
     cartButton.addEventListener("click", () => {
       if (cart.length === 0) {
         alert("Your cart is empty.");
       } else {
-        cartPanel.style.display = "block";
+        cartPanel.classList.add("open");
         renderCart();
       }
     });
@@ -144,32 +149,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (closeCartBtn) {
     closeCartBtn.addEventListener("click", () => {
-      cartPanel.style.display = "none";
+      cartPanel.classList.remove("open");
     });
   }
 
+  // Clear cart
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {
       if (confirm("Are you sure you want to clear your cart?")) {
         cart.length = 0;
         renderCart();
-        cartPanel.style.display = "none";
+        cartPanel.classList.remove("open");
       }
     });
   }
 
+  // Checkout (demo)
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
       if (cart.length === 0) {
         alert("Your cart is empty!");
       } else {
-        alert("Thank you for your order! This is a demo, so no payment was processed.");
+        alert("Thank you for your order! This is a demo — no payment processed.");
         cart.length = 0;
         renderCart();
-        cartPanel.style.display = "none";
+        cartPanel.classList.remove("open");
       }
     });
   }
 
+  // Initial render on page load
   renderCart();
 });
